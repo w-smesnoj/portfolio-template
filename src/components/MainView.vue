@@ -3,8 +3,8 @@
     <div class="main-view" :class="{ hidden: scrolledDown }">
       <div class="sider sidebar">
         <div class="holder">
-          <div class="xx">
-            <a class="title">Inhaltsverzeichnis</a>
+          <div class="xx" role="navigation" aria-labelledby="main-nav-heading">
+            <div class="title" id="main-nav-heading">Inhaltsverzeichnis</div>
             <a class="listitem" href="#intro">Intro</a>
             <a class="listitem" href="#Intro">Über Mich</a>
             <a class="listitem" href="#Projekte">Projekte</a>
@@ -35,8 +35,8 @@
             <a href="#Intro">Über Mich <Fa fa="arrow-down" /></a>
           </div>
         </section>
-        <section id="Intro">
-          <h2>Über Mich</h2>
+        <section id="Intro" aria-labelledby="intro-heading">
+          <h2 id="intro-heading">Über Mich</h2>
           <span>
             Ursprünglich komme ich aus der Grafik- & Medienbranche. Mein Bedarf
             nach Kreativität war damit gedeckt, aber Pixel schieben reicht mir
@@ -44,13 +44,9 @@
             unendlich vielen fordernden Problemstellungen, die das Programmieren
             bietet.
           </span>
-          <br />
         </section>
-        <section id="Projekte">
-          <br />
-          <br />
-          <br />
-          <h2>Projekte</h2>
+        <section id="Projekte" aria-labelledby="projekte-heading">
+          <h2 id="projekte-heading">Projekte</h2>
           <div class="cards">
             <div class="card-col">
               <Card :item="projects[0]" :txt="select" />
@@ -63,10 +59,10 @@
           </div>
         </section>
         <section id="Erfahrungen"></section>
-        <section id="Lebenslauf">
-          <h2>Lebenslauf</h2>
+        <section id="Lebenslauf" aria-labelledby="lebenslauf-heading">
+          <h2 id="lebenslauf-heading">Lebenslauf</h2>
           <div class="lebenslauf">
-            <h4>Berufserfahrung</h4>
+            <h3>Berufserfahrung</h3>
             <div class="cont" v-for="i in erfahrungen" :key="i.ort">
               <span>{{ i.datum }}</span>
               <span>{{ i.extra }}</span>
@@ -76,7 +72,7 @@
             </div>
           </div>
           <div class="bildungsweg">
-            <h4>Bildungsweg</h4>
+            <h3>Bildungsweg</h3>
             <div class="cont" v-for="i in bildung" :key="i.titel">
               <span>{{ i.datum }}</span>
               <span>{{ i.extra }}</span>
@@ -88,8 +84,8 @@
           <br />
           <a href="/cv.pdf"> <Fa fa="file-pdf" /> PDF herunterladen </a>
         </section>
-        <section id="Kontakt">
-          <h2>Kontakt</h2>
+        <section id="Kontakt" aria-labelledby="kontakt-heading">
+          <h2 id="kontakt-heading">Kontakt</h2>
           yourmail@gmail.com
           <br />
           <a href="mailto:yourmail@gmail.com">
@@ -349,7 +345,7 @@ export default {
 }
 .bildungsweg,
 .lebenslauf {
-  h4 {
+  h3 {
     font-size: 0.9rem;
   }
   cursor: default;
@@ -419,7 +415,10 @@ export default {
   }
 }
 section {
-  padding: 2rem 0rem;
+  padding: 6rem 0rem;
+  &:empty {
+    display: none;
+  }
   span {
     display: block;
     max-width: 550px;
@@ -434,13 +433,13 @@ section {
 .title {
   font-size: 12px !important;
   font-weight: 700 !important;
-  cursor: default;
   margin: 0.2em 0em 1rem 0rem;
-  display: block;
   text-transform: capitalize;
   color: #b2b2b2;
   text-transform: uppercase;
   letter-spacing: 0.02rem;
+  width: 100%;
+  text-align: center;
 }
 .xx {
   display: flex;
