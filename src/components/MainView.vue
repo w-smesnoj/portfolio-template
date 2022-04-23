@@ -35,8 +35,8 @@
             <a href="#Intro">Über Mich <Fa fa="arrow-down" /></a>
           </div>
         </section>
-        <section id="Intro">
-          <h2>Über Mich</h2>
+        <section id="Intro" aria-labelledby="intro-heading">
+          <h2 id="intro-heading">Über Mich</h2>
           <span>
             Ursprünglich komme ich aus der Grafik- & Medienbranche. Mein Bedarf
             nach Kreativität war damit gedeckt, aber Pixel schieben reicht mir
@@ -46,11 +46,11 @@
           </span>
           <br />
         </section>
-        <section id="Projekte">
+        <section id="Projekte" aria-labelledby="projekte-heading">
           <br />
           <br />
           <br />
-          <h2>Projekte</h2>
+          <h2 id="projekte-heading">Projekte</h2>
           <div class="cards">
             <div class="card-col">
               <Card :item="projects[0]" :txt="select" />
@@ -63,8 +63,8 @@
           </div>
         </section>
         <section id="Erfahrungen"></section>
-        <section id="Lebenslauf">
-          <h2>Lebenslauf</h2>
+        <section id="Lebenslauf" aria-labelledby="lebenslauf-heading">
+          <h2 id="lebenslauf-heading">Lebenslauf</h2>
           <div class="lebenslauf">
             <h3>Berufserfahrung</h3>
             <div class="cont" v-for="i in erfahrungen" :key="i.ort">
@@ -88,8 +88,8 @@
           <br />
           <a href="/cv.pdf"> <Fa fa="file-pdf" /> PDF herunterladen </a>
         </section>
-        <section id="Kontakt">
-          <h2>Kontakt</h2>
+        <section id="Kontakt" aria-labelledby="kontakt-heading">
+          <h2 id="kontakt-heading">Kontakt</h2>
           yourmail@gmail.com
           <br />
           <a href="mailto:yourmail@gmail.com">
