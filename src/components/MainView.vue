@@ -66,7 +66,7 @@
         <section id="Lebenslauf">
           <h2>Lebenslauf</h2>
           <div class="lebenslauf">
-            <h4>Berufserfahrung</h4>
+            <h3>Berufserfahrung</h3>
             <div class="cont" v-for="i in erfahrungen" :key="i.ort">
               <span>{{ i.datum }}</span>
               <span>{{ i.extra }}</span>
@@ -76,7 +76,7 @@
             </div>
           </div>
           <div class="bildungsweg">
-            <h4>Bildungsweg</h4>
+            <h3>Bildungsweg</h3>
             <div class="cont" v-for="i in bildung" :key="i.titel">
               <span>{{ i.datum }}</span>
               <span>{{ i.extra }}</span>
@@ -349,7 +349,7 @@ export default {
 }
 .bildungsweg,
 .lebenslauf {
-  h4 {
+  h3 {
     font-size: 0.9rem;
   }
   cursor: default;
