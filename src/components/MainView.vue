@@ -3,8 +3,8 @@
     <div class="main-view" :class="{ hidden: scrolledDown }">
       <div class="sider sidebar">
         <div class="holder">
-          <div class="xx">
-            <div class="title">Inhaltsverzeichnis</div>
+          <div class="xx" role="navigation" aria-labelledby="main-nav-heading">
+            <div class="title" id="main-nav-heading">Inhaltsverzeichnis</div>
             <a class="listitem" href="#intro">Intro</a>
             <a class="listitem" href="#Intro">Über Mich</a>
             <a class="listitem" href="#Projekte">Projekte</a>
