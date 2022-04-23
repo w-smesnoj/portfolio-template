@@ -44,12 +44,8 @@
             unendlich vielen fordernden Problemstellungen, die das Programmieren
             bietet.
           </span>
-          <br />
         </section>
         <section id="Projekte" aria-labelledby="projekte-heading">
-          <br />
-          <br />
-          <br />
           <h2 id="projekte-heading">Projekte</h2>
           <div class="cards">
             <div class="card-col">
@@ -419,7 +415,7 @@ export default {
   }
 }
 section {
-  padding: 2rem 0rem;
+  padding: 6rem 0rem;
   span {
     display: block;
     max-width: 550px;
