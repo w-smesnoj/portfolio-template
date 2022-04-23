@@ -416,6 +416,9 @@ export default {
 }
 section {
   padding: 6rem 0rem;
+  &:empty {
+    display: none;
+  }
   span {
     display: block;
     max-width: 550px;
