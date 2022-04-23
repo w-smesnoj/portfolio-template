@@ -4,7 +4,7 @@
       <div class="sider sidebar">
         <div class="holder">
           <div class="xx">
-            <a class="title">Inhaltsverzeichnis</a>
+            <div class="title">Inhaltsverzeichnis</div>
             <a class="listitem" href="#intro">Intro</a>
             <a class="listitem" href="#Intro">Über Mich</a>
             <a class="listitem" href="#Projekte">Projekte</a>
@@ -433,13 +433,13 @@ section {
 .title {
   font-size: 12px !important;
   font-weight: 700 !important;
-  cursor: default;
   margin: 0.2em 0em 1rem 0rem;
-  display: block;
   text-transform: capitalize;
   color: #b2b2b2;
   text-transform: uppercase;
   letter-spacing: 0.02rem;
+  width: 100%;
+  text-align: center;
 }
 .xx {
   display: flex;
